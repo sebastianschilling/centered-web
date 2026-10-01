@@ -3,253 +3,205 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Centered – auto reframing for iPhone</title>
-<meta name="description" content="Put your phone down and do your thing. Centered turns a wide, static shot into a vertical video where the person stays in frame. Everything runs on your iPhone – no uploads, no accounts.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#121212">
+<title>Centered – You move. The frame follows.</title>
+<meta name="description" content="iPhone app that turns a static video of a person into a video where the frame follows them. Runs on your iPhone, nothing is uploaded.">
+<link rel="icon" href="images/app-icon.png">
+<link rel="apple-touch-icon" href="images/app-icon.png">
 <link rel="stylesheet" href="styles.css">
-<link rel="icon" href="assets/favicon.png" sizes="64x64">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Centered – auto reframing for iPhone">
-<meta property="og:description" content="Put your phone down and do your thing. Centered turns a wide, static shot into a vertical video where you stay in frame.">
-<meta property="og:url" content="https://centered.sebastianschilling.com/">
-<!-- AUSFÜLLEN: og-image.png (1200×630) in assets/ ablegen, sobald das erste
-     Vorher/Nachher-Bild steht. Ohne die Datei zeigen Messenger und Mastodon nur Text. -->
-<meta property="og:image" content="https://centered.sebastianschilling.com/assets/og-image.png">
-<meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
+<div class="site">
 
-<header class="site-head">
-  <div class="wrap">
-    <a class="wordmark" href="/"><img src="assets/apple-touch-icon.png" alt="" width="30" height="30">Centered</a>
-    <nav aria-label="Main">
-      <a href="#how">How it works</a>
-      <a href="#privacy">Privacy</a>
-      <a href="#press">Press</a>
-      <a href="support.html">Support</a>
-    </nav>
-  </div>
+<header class="wrap hdr">
+<a class="brand" href="index.html"><img src="images/app-icon.png" alt="">Centered</a>
+<nav class="nav" aria-label="Main">
+<a class="opt" href="#how">How it works</a>
+<a class="opt" href="#price">Price</a>
+<a href="support.html">Support</a>
+</nav>
 </header>
 
-<main id="main">
+<main>
+<section class="wrap hero">
+<div class="hero-copy">
+<span class="eyebrow">iPhone app · iOS 17 or later</span>
+<h1 class="h1">You move.<br>The frame follows.</h1>
+<p class="lead">Keep your phone still and film the whole scene. Centered turns the clip into a video that keeps you in frame, with a calm camera move that follows along.</p>
+<div class="cta-row">
+<span class="badge-store">[App Store badge]</span>
+<span class="small">Coming soon · Free with a small watermark</span>
+</div>
+<div class="trust">
+<span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10.5" width="14" height="10" rx="2"></rect><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"></path></svg>Runs on your iPhone</span>
+<span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4M7 9l5-5 5 5"></path><path d="M4 20h16" stroke-dasharray="2 3"></path></svg>Nothing is uploaded</span>
+<span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c1-4 4-6 8-6s7 2 8 6"></path><path d="M3 3l18 18"></path></svg>No account</span>
+</div>
+</div>
+<div class="phone"><img src="images/screen-framing.jpg" alt="Centered framing screen: a climber stays centered in a vertical crop"></div>
+</section>
 
-  <section class="hero">
-    <div class="wrap">
-      <h1>Put your phone down and do your thing.</h1>
-      <p class="lede">Centered turns a wide, static shot into a vertical video where the
-        person stays in frame – with a soft, hand-held camera move that follows along.</p>
-      <div class="cta">
-        <!-- AUSFÜLLEN: Sobald die App im Store ist, hier den echten App-Store-Link und
-             das offizielle Apple-Badge einsetzen (Badge lokal in assets/ ablegen –
-             die Seite lädt bewusst nichts von fremden Servern). -->
-        <span class="badge-slot" aria-disabled="true">Coming to the App&nbsp;Store</span>
-        <span class="cta-note">iPhone · iOS 17 or later · free with a small watermark</span>
-      </div>
-      <p class="cta-note">Nothing is uploaded. No account. No tracking.</p>
-    </div>
-  </section>
+<section class="wrap sec" aria-labelledby="idea">
+<div class="sec-head">
+<span class="eyebrow">The idea</span>
+<h2 class="h2" id="idea">Film the whole scene. Get a video that follows you.</h2>
+<p class="lead">However you film it – the frame moves with you.</p>
+</div>
+<div class="ba-rows">
+<div class="ba-row">
+<div class="ba-text">
+<h3 class="h3">Filmed upright</h3>
+<p>For tall movement like climbing or pole. The whole wall in the shot, you up close in the result.</p>
+</div>
+<div class="ba-vis up">
+<div class="ba-src ph-tall"><div class="ph"><b>[Before]</b>Upright clip</div><div class="crop zoom"></div><div class="clip" role="img" aria-label="Upright clip of a climber, the yellow frame follows the climber" style="background-image:url(videos/idea-upright-before.jpg)"><video autoplay muted loop playsinline preload="metadata" poster="videos/idea-upright-before.jpg" aria-hidden="true"><source src="videos/idea-upright-before.mp4" type="video/mp4"></video></div></div>
+<svg class="arrow" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+<div class="ph ph-tall"><b>[After]</b>9:16<div class="clip" role="img" aria-label="Resulting 9:16 video" style="background-image:url(videos/idea-upright-after.jpg)"><video autoplay muted loop playsinline preload="metadata" poster="videos/idea-upright-after.jpg" aria-hidden="true"><source src="videos/idea-upright-after.mp4" type="video/mp4"></video></div></div>
+</div>
+</div>
+<div class="ba-row">
+<div class="ba-text">
+<h3 class="h3">Filmed sideways</h3>
+<p>For wide movement like dance or martial arts. The whole floor in the shot, you in the middle of the result.</p>
+</div>
+<div class="ba-vis side">
+<div class="ba-src ph-wide"><div class="ph"><b>[Before]</b>Sideways clip</div><div class="crop"></div><div class="clip" role="img" aria-label="Sideways clip, the yellow frame follows the person" style="background-image:url(videos/idea-sideways-before.jpg)"><video autoplay muted loop playsinline preload="metadata" poster="videos/idea-sideways-before.jpg" aria-hidden="true"><source src="videos/idea-sideways-before.mp4" type="video/mp4"></video></div></div>
+<svg class="arrow" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+<div class="ph ph-tall"><b>[After]</b>9:16<div class="clip" role="img" aria-label="Resulting 9:16 video" style="background-image:url(videos/idea-sideways-after.jpg)"><video autoplay muted loop playsinline preload="metadata" poster="videos/idea-sideways-after.jpg" aria-hidden="true"><source src="videos/idea-sideways-after.mp4" type="video/mp4"></video></div></div>
+</div>
+</div>
+</div>
+</section>
 
-  <section id="before-after">
-    <div class="wrap">
-      <h2>The whole idea in three seconds</h2>
-      <p class="lede">Left: what the camera saw. Right: what Centered made of it.</p>
-      <div class="split" style="margin-top: 28px;">
-        <div class="shot shot-split">
-          <b>Placeholder · Before</b>
-          <span>Raw wide shot, person small in the frame. Loop, muted, ~4&nbsp;s.</span>
-        </div>
-        <div class="shot shot-split">
-          <b>Placeholder · After</b>
-          <span>The Centered result, vertical, person always in frame.</span>
-        </div>
-      </div>
-    </div>
-  </section>
+<section class="wrap sec" id="how" aria-labelledby="how-h">
+<div class="sec-head">
+<span class="eyebrow">How it works</span>
+<h2 class="h2" id="how-h">Three steps, a few seconds each.</h2>
+<p class="lead">Finding the people takes a moment once. After that, every change shows up right away.</p>
+</div>
+<div class="steps">
+<article class="step">
+<span class="num">1</span>
+<h3 class="h3">Pick a clip</h3>
+<p>Choose a video from your photo library. Clips you worked on before wait under Recent.</p>
+<div class="phone sm"><img src="images/screen-start.jpg" alt="Start screen"></div>
+</article>
+<article class="step">
+<span class="num">2</span>
+<h3 class="h3">Check who to follow</h3>
+<p>Centered finds the people and follows the main one. Wrong frame? Correct it, or combine two tracks of the same person.</p>
+<div class="phone sm"><img src="images/screen-tracking.jpg" alt="Tracking screen"></div>
+</article>
+<article class="step">
+<span class="num">3</span>
+<h3 class="h3">Frame and export</h3>
+<p>Pick the format and how the zoom behaves, then save to Photos or share.</p>
+<div class="phone sm"><img src="images/screen-export.jpg" alt="Export screen"></div>
+</article>
+</div>
+</section>
 
-  <section id="how">
-    <div class="wrap">
-      <h2>How it works</h2>
-      <p class="lede">Three steps. The expensive part – finding the people – happens once;
-        after that the preview reacts to every slider in milliseconds.</p>
-      <div class="grid grid-3" style="margin-top: 32px;">
+<section class="wrap sec" aria-labelledby="steer">
+<div class="sec-head">
+<span class="eyebrow">What you can steer</span>
+<h2 class="h2" id="steer">Automatic, until you want a say.</h2>
+</div>
+<div class="feats">
+<div class="feat"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8V4h4M20 8V4h-4M4 16v4h4M20 16v4h-4"></path><rect x="9" y="7" width="6" height="10" rx="1"></rect></svg><h3 class="h3">Correct the tracking</h3><p>Drag the frame where it should be. Your points override the automatic detection.</p></div>
+<div class="feat"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h6c3 0 3 5 6 5h6M3 17h6c3 0 3-5 6-5"></path><path d="M18 9l3 3-3 3"></path></svg><h3 class="h3">One person, not two</h3><p>If someone turns away and comes back as a new track, combine them into one.</p></div>
+<div class="feat"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="M15.5 15.5L21 21M10.5 7.5v6M7.5 10.5h6"></path></svg><h3 class="h3">Fixed, auto or manual zoom</h3><p>Keep one distance, follow the size of the person, or set the zoom yourself at chosen moments.</p></div>
+<div class="feat"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17c3 0 4-10 9-10s6 10 9 10"></path></svg><h3 class="h3">Quick, medium or calm</h3><p>Choose how smoothly the zoom changes. Calm looks like someone holding the camera.</p></div>
+<div class="feat"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><rect x="3" y="5" width="7" height="13" rx="1.5"></rect><rect x="13" y="8" width="8" height="10" rx="1.5"></rect></svg><h3 class="h3">9:16, 4:5, 1:1, 16:9</h3><p>Reels, feed, square or wide – switch any time and the preview follows.</p></div>
+<div class="feat"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 1 1-2.3-5.6"></path><path d="M20 4v5h-5"></path></svg><h3 class="h3">Pick up where you left off</h3><p>Detection and corrections stay on your iPhone. Reopen a clip from Recent – no second analysis.</p></div>
+</div>
+</section>
 
-        <article class="card">
-          <div class="shot shot-tall"><b>Screenshot · Video</b><span>Start screen with the illustration and “Select video”.</span></div>
-          <span class="step-no">Step 1</span>
-          <h3>Video</h3>
-          <p>Pick a clip from your photo library. Trim the start and the end on the
-            timeline. Videos you worked on before come back under “Recent”.</p>
-        </article>
+<section class="wrap sec" aria-labelledby="priv">
+<div class="band">
+<div class="ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10.5" width="14" height="10" rx="2"></rect><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"></path></svg></div>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<h2 class="h2" id="priv">Your videos stay on your iPhone.</h2>
+<p>Centered analyses and renders everything on the device. Nothing is uploaded, there are no accounts and no usage data is collected. Photo access is only used to load the clip you pick and to save the finished one. The app has no networking code at all. <a href="datenschutz.html">Read the privacy policy</a></p>
+</div>
+</div>
+</section>
 
-        <article class="card">
-          <div class="shot shot-tall"><b>Screenshot · Tracking</b><span>Coloured frames around two people, tool strip at the bottom.</span></div>
-          <span class="step-no">Step 2</span>
-          <h3>Tracking</h3>
-          <p>Centered detects the people in the clip. Tap the ones you want to follow.
-            Where the automatic detection was wrong, correct it: drag a frame, combine two
-            frames that show the same person, or add a person by hand.</p>
-        </article>
+<section class="wrap sec" aria-labelledby="who">
+<div class="sec-head">
+<span class="eyebrow">Who it’s for</span>
+<h2 class="h2" id="who">The camera stands still. You move.</h2>
+</div>
+<div class="chips">
+<span class="chip">Climbing &amp; bouldering</span><span class="chip">Dance</span><span class="chip">Fitness &amp; mobility</span><span class="chip">Yoga</span><span class="chip">Calisthenics</span><span class="chip">Skate, BMX, scooter</span><span class="chip">Aerial, pole, circus</span><span class="chip">Martial arts</span><span class="chip">Gymnastics &amp; cheer</span><span class="chip">Parkour</span><span class="chip">Golf, tennis, throwing</span><span class="chip">Physio &amp; coaching</span>
+</div>
+</section>
 
-        <article class="card">
-          <div class="shot shot-tall"><b>Screenshot · Framing</b><span>Vertical preview, format badge, zoom and ease sliders.</span></div>
-          <span class="step-no">Step 3</span>
-          <h3>Framing &amp; export</h3>
-          <p>Choose the format, set the zoom, decide how quick or how calm the camera
-            should move – then save the result to Photos or share it.</p>
-        </article>
+<section class="wrap sec" id="price" aria-labelledby="price-h">
+<div class="sec-head">
+<span class="eyebrow">Price</span>
+<h2 class="h2" id="price-h">Free to use. One purchase removes the watermark.</h2>
+</div>
+<div class="prices">
+<div class="price">
+<span class="tag">Free</span>
+<div class="amt">€0</div>
+<ul>
+<li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Every feature, no limits</li>
+<li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Export as often as you like</li>
+<li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Videos carry a small “Centered” watermark</li>
+</ul>
+</div>
+<div class="price hl">
+<span class="tag">No watermark</span>
+<div class="amt">€4.99 <span>once</span></div>
+<ul>
+<li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Removes the watermark from every export</li>
+<li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>No subscription</li>
+<li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>On all your devices, with Family Sharing</li>
+</ul>
+</div>
+</div>
+<p class="small" style="margin-top: 16px">Prices in other regions are set by the App Store. Restore a purchase any time in the app’s info screen.</p>
+</section>
 
-      </div>
-    </div>
-  </section>
-
-  <section id="features">
-    <div class="wrap">
-      <h2>What you can steer</h2>
-      <div class="grid grid-2" style="margin-top: 28px;">
-
-        <article class="card feature">
-          <h3>More than one person</h3>
-          <p>Follow a duo or a group – the frame holds all of them. Two detections of the
-            same person can be combined into one.</p>
-        </article>
-
-        <article class="card feature">
-          <h3>Fixed, auto or manual zoom</h3>
-          <p>Keep one distance, let the zoom follow the size of the person – wider when
-            they are close, tighter when they are far away – or set it yourself with points
-            along the timeline.</p>
-        </article>
-
-        <article class="card feature">
-          <h3>Now ↔ Ahead</h3>
-          <p>Let the camera lead the movement instead of chasing it, by up to five seconds.
-            It stays just as calm; it simply arrives earlier.</p>
-        </article>
-
-        <article class="card feature">
-          <h3>Quick ↔ Calm</h3>
-          <p>One slider for the character of the move: snappy and reactive, or slow and
-            unhurried.</p>
-        </article>
-
-        <article class="card feature">
-          <h3>9:16, 4:5, 1:1, 16:9</h3>
-          <p>Export for reels, for the feed, for a square post – or keep it wide.</p>
-        </article>
-
-        <article class="card feature">
-          <h3>Hand-held, not robotic</h3>
-          <p>The camera move carries a deliberate hint of hand-held motion. It looks like
-            someone filmed you, not like a crop that slides across a still frame.</p>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <section id="privacy">
-    <div class="wrap">
-      <div class="band">
-        <h2>Everything stays on your device</h2>
-        <!-- Wortgleich mit dem Datenschutz-Absatz in der App (Views/AboutView.swift).
-             Wenn sich der eine ändert, muss der andere mit. -->
-        <p>Your videos stay on your device. Centered analyses and renders everything
-          locally – nothing is uploaded, there are no accounts, and no usage data is
-          collected. Access to your photo library is used only to load the video you pick
-          and to save the finished one.</p>
-        <p>That is not a promise about a server somewhere. The app has no networking code
-          at all. <a href="privacy.html">Read the privacy policy</a>.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="who">
-    <div class="wrap">
-      <h2>Who it’s for</h2>
-      <p class="lede">The situation is always the same: the camera stands still, a person
-        moves, and what’s needed is vertical.</p>
-      <ul class="chips" style="margin-top: 24px;">
-        <li>Dance</li>
-        <li>Fitness &amp; mobility</li>
-        <li>Yoga</li>
-        <li>Calisthenics</li>
-        <li>Skate, BMX, scooter</li>
-        <li>Aerial, pole, circus</li>
-        <li>Martial arts</li>
-        <li>Gymnastics &amp; cheer</li>
-        <li>Parkour</li>
-        <li>Golf, tennis, throwing</li>
-        <li>Physio &amp; coaching</li>
-        <li>Climbing &amp; bouldering</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="pricing">
-    <div class="wrap">
-      <h2>Price</h2>
-      <div class="grid grid-2" style="margin-top: 28px;">
-        <article class="card">
-          <p class="price">Free<small>Every feature, no limits</small></p>
-          <p>Import, track, correct, frame and export as often as you like. Exported videos
-            carry a small “Centered” watermark in the corner.</p>
-        </article>
-        <article class="card card-accent">
-          <p class="price">€4.99 once<small>Removes the watermark</small></p>
-          <p>A single in-app purchase, no subscription. It applies to every video you
-            export from then on, on all your devices, and it is included in Family Sharing.</p>
-        </article>
-      </div>
-      <p class="cta-note" style="margin-top: 18px;">Prices in other regions are set by the
-        App Store. The purchase can be restored at any time under “About Centered”.</p>
-    </div>
-  </section>
-
-  <section id="press">
-    <div class="wrap">
-      <h2>Press kit</h2>
-      <p class="lede">Short version: Centered is an iPhone app that reframes a wide,
-        static shot into a vertical video where the person stays in frame. It was built
-        for the situation every gym, studio and skatepark shares – a phone leaned against
-        a wall – and it does all of its work on the device.</p>
-
-      <div class="grid grid-2" style="margin-top: 32px;">
-        <article class="card">
-          <h3>Facts</h3>
-          <dl class="facts">
-            <dt>Developer</dt><dd>Sebastian Schilling, Germany</dd>
-            <dt>Platform</dt><dd>iPhone, iOS 17 or later</dd>
-            <dt>Price</dt><dd>Free, €4.99 one-time to remove the watermark</dd>
-            <dt>Data</dt><dd>No accounts, no uploads, no analytics</dd>
-            <dt>Languages</dt><dd>English</dd>
-            <dt>Contact</dt><dd><a href="mailto:centered@sebastianschilling.com">centered@sebastianschilling.com</a></dd>
-          </dl>
-        </article>
-        <article class="card">
-          <h3>Assets</h3>
-          <p><a href="assets/icon-1024.png" download>App icon, 1024 × 1024 PNG</a></p>
-          <!-- AUSFÜLLEN: Screenshots und das Vorschauvideo hier verlinken, sobald sie
-               produziert sind (MARKETING.md §3 und §9). -->
-          <p class="cta-note">Screenshots and a preview video will be added here.
-            For material from a specific discipline, just ask by email.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
+<section class="wrap sec" aria-labelledby="press">
+<div class="sec-head">
+<span class="eyebrow">Press kit</span>
+<h2 class="h2" id="press">Centered in one paragraph.</h2>
+<p class="lead">An iPhone app that turns a static shot into a video where the camera follows the person. Built for the phone that stands still in every gym, studio and skatepark – and it does all of its work on the device.</p>
+</div>
+<div class="press">
+<div class="box">
+<h3 class="h3">Facts</h3>
+<dl class="facts">
+<dt>Developer</dt><dd>Sebastian Schilling, Germany</dd>
+<dt>Platform</dt><dd>iPhone, iOS 17 or later</dd>
+<dt>Price</dt><dd>Free, €4.99 one-time to remove the watermark</dd>
+<dt>Data</dt><dd>No accounts, no uploads, no analytics</dd>
+<dt>Language</dt><dd>English</dd>
+<dt>Contact</dt><dd><a href="mailto:centered@sebastianschilling.com">centered@sebastianschilling.com</a></dd>
+</dl>
+</div>
+<div class="box" style="display: flex; flex-direction: column; gap: 16px">
+<h3 class="h3">Assets</h3>
+<div style="display: flex; align-items: center; gap: 16px">
+<img src="images/app-icon.png" alt="" style="width: 64px; height: 64px; border-radius: 14px">
+<div style="display: flex; flex-direction: column; gap: 2px"><a href="images/app-icon-1024.png" download>App icon</a><span class="small">1024 × 1024 PNG</span></div>
+</div>
+<p class="small" style="margin: 0">Screenshots and a preview video follow at launch. For material from a specific discipline, just ask by email.</p>
+</div>
+</div>
+</section>
 </main>
 
-<footer class="site-foot">
-  <div class="wrap">
-    <span>© 2026 Sebastian Schilling</span>
-    <nav aria-label="Legal and support">
-      <a href="support.html">Support</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="impressum.html">Impressum</a>
-    </nav>
-  </div>
+<footer class="ftr">
+<div class="wrap">
+<span>© 2026 Sebastian Schilling</span>
+<nav aria-label="Footer"><a href="support.html">Support</a><a href="datenschutz.html">Datenschutz</a><a href="impressum.html">Impressum</a></nav>
+</div>
 </footer>
 
+</div>
 </body>
 </html>

@@ -11,10 +11,11 @@ root=$(git rev-parse --show-toplevel)
 cd "$root"
 
 # Die Platzhalter sind der Grund, warum dieses Skript existiert: Eine Seite ohne
-# ladungsfähige Anschrift darf nicht online gehen.
-if grep -rl 'AUSFÜLLEN' web >/dev/null 2>&1; then
+# ladungsfähige Anschrift darf nicht online gehen. Nur die HTML-Seiten prüfen: README und
+# dieses Skript nennen das Wort selbst und würden sonst jeden Lauf blockieren.
+if grep -lE 'AUSFÜLLEN|class="todo"' web/*.html >/dev/null 2>&1; then
   echo "Abbruch: In web/ stehen noch Platzhalter." >&2
-  grep -rn 'AUSFÜLLEN' web | sed 's/^/  /' >&2
+  grep -nE 'AUSFÜLLEN|class="todo"' web/*.html | sed 's/^/  /' >&2
   exit 1
 fi
 

@@ -8,24 +8,41 @@ bleibt die Datenschutzerklärung so kurz, wie sie ist.
 |---|---|
 | `index.html` | Landingpage und Presse-Kit (en-US) |
 | `support.html` | **Support URL** für App Store Connect (en-US) |
-| `privacy.html` | **Privacy Policy URL** – englische Kurzfassung, deutscher Volltext |
+| `datenschutz.html` | Datenschutzerklärung – englische Kurzfassung, deutscher Volltext |
+| `privacy.html` | Nur Weiterleitung auf `datenschutz.html` (alte **Privacy Policy URL**, nicht löschen) |
 | `impressum.html` | Impressum nach § 5 DDG |
+| `styles.css`, `images/` | Design und Bilder (Redesign aus `design/centered-website/` im Hauptrepo, siehe dortige `WEBSITE-SPEC.md`) |
+| `videos/` | Clips für „The idea“ auf der Startseite (siehe unten) |
+
+Kopf und Fuß stehen in jeder Seite einzeln – ohne Generator gibt es keine Partials. Wer
+dort etwas ändert, ändert es in allen vier Dateien.
+
+## Clips für „The idea“
+
+Die Startseite bindet vier Clips bereits ein. Solange eine Datei fehlt, bleibt der
+gestrichelte Platzhalter sichtbar; liegt sie in `videos/`, verdeckt das Video ihn.
+
+| Datei (je `.mp4` + `.jpg` als Standbild) | Inhalt |
+|---|---|
+| `idea-upright-before` | Hochkant-Clip 9:16, ganze Wand im Bild, **gelber Rahmen eingerendert** |
+| `idea-upright-after` | Daraus gerendertes 9:16-Video |
+| `idea-sideways-before` | Querformat-Clip 16:9, ganze Fläche im Bild, **gelber Rahmen eingerendert** |
+| `idea-sideways-after` | Daraus gerendertes 9:16-Video |
+
+H.264-MP4 ohne Ton, 6–10 s, höchstens ~1,5 MB, mit `-movflags +faststart`. Das `.jpg` ist
+Poster und zugleich das Standbild bei „Bewegung reduzieren“. Die `aria-label` in
+`index.html` beschreiben den Inhalt – an die echten Clips anpassen. Wenn alle vier liegen,
+können die Platzhalter (`.ph`-Text, `.crop`) aus dem HTML raus.
 
 ## Vor dem ersten Livegang ausfüllen
 
-`./deploy.sh` bricht ab, solange irgendwo `AUSFÜLLEN` steht. Zu erledigen:
+`./deploy.sh` bricht ab, solange in einer Seite `AUSFÜLLEN` oder `class="todo"` steht. Zu erledigen:
 
-- [ ] **Anschrift** in `impressum.html` und in `privacy.html` (Punkt 1)
-- [ ] **Umsatzsteuer**: in `impressum.html` Variante A (USt-IdNr.) oder B
-      (Kleinunternehmer § 19 UStG) behalten, die andere löschen
-- [ ] **E-Mail-Anbieter** in `privacy.html` (Punkt 4) – wer `centered@…` technisch betreibt
-- [ ] **Aufsichtsbehörde** in `privacy.html` (Punkt 5) – die des eigenen Bundeslandes
-- [ ] `assets/og-image.png` (1200 × 630) anlegen, sonst zeigen Messenger nur Text
-- [ ] Nach der Freigabe im Store: App-Store-Link und Apple-Badge in `index.html`
-      (Badge-Grafik lokal in `assets/` ablegen, nicht von Apple nachladen)
-
-Screenshot- und Videoflächen sind als gestrichelte Kästen angelegt und beschriftet; sie
-lassen sich einzeln durch `<img>` bzw. `<video muted loop playsinline>` ersetzen.
+- [x] Anschrift, Umsatzsteuer, E-Mail-Anbieter, Aufsichtsbehörde
+- [ ] Die vier Clips für „The idea“ (siehe oben)
+- [ ] Nach der Freigabe im Store: `[App Store badge]` in `index.html` durch das offizielle
+      Badge ersetzen (SVG lokal in `images/` ablegen, nicht von Apple nachladen), verlinkt
+      auf die App-Store-Seite; den Text daneben auf „Free with a small watermark“ kürzen
 
 Die Rechtstexte sind auf diese App zugeschnitten, ersetzen aber keine Rechtsberatung.
 
@@ -56,5 +73,6 @@ Jekyll-Verarbeitung ab.
 ## In App Store Connect eintragen
 
 - Support URL: `https://centered.sebastianschilling.com/support.html`
-- Privacy Policy URL: `https://centered.sebastianschilling.com/privacy.html`
+- Privacy Policy URL: `https://centered.sebastianschilling.com/datenschutz.html`
+  (die alte `…/privacy.html` leitet weiter und funktioniert ebenfalls)
 - Marketing URL (optional): `https://centered.sebastianschilling.com/`
