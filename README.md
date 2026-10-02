@@ -19,8 +19,8 @@ dort etwas ändert, ändert es in allen vier Dateien.
 
 ## Clips für „The idea“
 
-Die Startseite bindet vier Clips bereits ein. Solange eine Datei fehlt, bleibt der
-gestrichelte Platzhalter sichtbar; liegt sie in `videos/`, verdeckt das Video ihn.
+Die Startseite bindet vier Clips ein (Klettern hochkant, Tanzen quer; erzeugt mit Grok
+Imagine, bearbeitet mit Centered). Wer einen Clip ersetzt, behält Dateinamen und Format bei.
 
 | Datei (je `.mp4` + `.jpg` als Standbild) | Inhalt |
 |---|---|
@@ -29,17 +29,19 @@ gestrichelte Platzhalter sichtbar; liegt sie in `videos/`, verdeckt das Video ih
 | `idea-sideways-before` | Querformat-Clip 16:9, ganze Fläche im Bild, **gelber Rahmen eingerendert** |
 | `idea-sideways-after` | Daraus gerendertes 9:16-Video |
 
-H.264-MP4 ohne Ton, 6–10 s, höchstens ~1,5 MB, mit `-movflags +faststart`. Das `.jpg` ist
+H.264-MP4 ohne Ton, 6–10 s, höchstens ~1,5 MB, mit `-movflags +faststart`. Ist der
+Hochkant-Clip 2:3 statt 9:16 (Grok liefert 784 × 1168), trägt seine Box die Klasse `src-2x3`.
+Den gelben Rahmen brennt man ein, indem man das Nachher-Video (natives Crop der App) per
+Template-Matching im Vorher-Video sucht – so folgt er exakt dem Ausschnitt der App. Das `.jpg` ist
 Poster und zugleich das Standbild bei „Bewegung reduzieren“. Die `aria-label` in
-`index.html` beschreiben den Inhalt – an die echten Clips anpassen. Wenn alle vier liegen,
-können die Platzhalter (`.ph`-Text, `.crop`) aus dem HTML raus.
+`index.html` beschreiben den Inhalt – beim Austausch mit anpassen.
 
 ## Vor dem ersten Livegang ausfüllen
 
 `./deploy.sh` bricht ab, solange in einer Seite `AUSFÜLLEN` oder `class="todo"` steht. Zu erledigen:
 
 - [x] Anschrift, Umsatzsteuer, E-Mail-Anbieter, Aufsichtsbehörde
-- [ ] Die vier Clips für „The idea“ (siehe oben)
+- [x] Die vier Clips für „The idea“ (siehe oben)
 - [ ] Nach der Freigabe im Store: `[App Store badge]` in `index.html` durch das offizielle
       Badge ersetzen (SVG lokal in `images/` ablegen, nicht von Apple nachladen), verlinkt
       auf die App-Store-Seite; den Text daneben auf „Free with a small watermark“ kürzen

@@ -64,12 +64,8 @@ html{scroll-behavior:smooth}
 
 /* before / after */
 .ba{display:grid; grid-template-columns:minmax(0,1.6fr) auto minmax(0,.6fr); gap:28px; align-items:center}
-.ph{position:relative; border-radius:16px; background:var(--surface); border:1.5px dashed #4A4A4E; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:6px; color:var(--text-4); font-size:14px; text-align:center; padding:16px}
-.ph b{color:var(--text-2); font-weight:600; font-size:15px}
-.ph-wide{aspect-ratio:16/9; align-items:flex-start; justify-content:flex-end; text-align:left; padding:20px; max-width:none}
-.ph-wide span{max-width:34%}
+.ph-wide{aspect-ratio:16/9}
 .ph-tall{aspect-ratio:9/16}
-.crop{position:absolute; top:-1.5px; bottom:-1.5px; left:38%; aspect-ratio:9/16; border:3px solid var(--accent); border-radius:10px; box-shadow:0 0 0 2000px rgba(0,0,0,.45); pointer-events:none}
 .ba-wide-wrap{position:relative; overflow:hidden; border-radius:16px}
 .arrow{color:var(--accent)}
 .cap{margin-top:12px; font-size:14px; color:var(--text-4); text-align:center}
@@ -80,22 +76,19 @@ html{scroll-behavior:smooth}
 .ba-text{display:flex; flex-direction:column; gap:8px}
 .ba-text p{margin:0; color:var(--text-3); font-size:16px}
 .ba-vis{display:flex; align-items:center; gap:24px; height:320px}
-.ba-vis > .ph, .ba-src{height:100%}
+.ba-src{height:100%}
 .ba-src{position:relative; overflow:hidden; border-radius:16px; flex-shrink:0}
 .ba-src.ph-tall{aspect-ratio:9/16}
+/* Hochkant-Quellen aus Grok sind 2:3 (784 × 1168), nicht 9:16 – in einer 9:16-Box schnitte
+   `object-fit: cover` den Fels an den Seiten ab, und mit ihm den Rand des gelben Rahmens. */
+.ba-src.ph-tall.src-2x3{aspect-ratio:2/3}
 .ba-src.ph-wide{aspect-ratio:16/9}
-.ba-src .ph{position:absolute; inset:0; aspect-ratio:auto; justify-content:flex-end; align-items:flex-start; text-align:left; padding:14px}
-.ba-vis > .ph{flex-shrink:0}
-.crop.zoom{left:22%; top:14%; bottom:auto; height:60%}
 .ba-vis.side{height:240px}
 .ba-vis .arrow{flex-shrink:0}
 
-/* Clips in „The idea“ (Dateien in videos/, siehe README). Sie liegen ÜBER dem Platzhalter
-   statt ihn zu ersetzen: Fehlt eine Datei, bleibt das Video durchsichtig und der Platzhalter
-   sichtbar – die Clips lassen sich so einzeln ablegen, ohne das HTML anzufassen. Den gelben
-   Rahmen trägt der Vorher-Clip selbst (eingerendert), deshalb verdeckt er das statische .crop. */
+/* Clips in „The idea“ (Dateien in videos/, siehe README). Den gelben Rahmen trägt der
+   Vorher-Clip selbst (eingerendert) – so folgt er exakt dem Ausschnitt der App. */
 .clip{position:absolute; inset:0; z-index:1; border-radius:16px; overflow:hidden; pointer-events:none; background:center/cover no-repeat}
-.ph > .clip{inset:-1.5px}
 .clip video{width:100%; height:100%; object-fit:cover; border-radius:16px; display:block}
 /* Ohne JavaScript lässt sich autoplay nicht anhalten – also das Video ausblenden; stehen bleibt
    das Standbild, das als Hintergrund von .clip im HTML hängt. Hintergrund statt <img>: Fehlt die
@@ -177,7 +170,9 @@ html{scroll-behavior:smooth}
 
 /* ---------- mobile ---------- */
 @container (max-width: 640px){
-  .site{--gutter:20px; font-size:16px}
+  /* Auf die KINDER von .site: .site ist selbst der Container dieser Abfrage, und ein Element
+     kann sich nicht selbst abfragen – auf .site gesetzt, griff der schmale Rand nie. */
+  .site > *{--gutter:20px; font-size:16px}
   .hdr{height:60px}
   .nav{gap:18px; font-size:15px}
   .nav .opt{display:none}
@@ -199,8 +194,6 @@ html{scroll-behavior:smooth}
   .ba-vis{gap:10px}
   .ba-vis.up{height:240px}
   .ba-vis.side{height:104px}
-  .ba-vis.side .ph b{font-size:12px} .ba-vis.side > .ph{padding:4px}
-  .ba-vis.side .ba-src .ph span, .ba-vis.side .ba-src .ph{font-size:11px}
   .ba-vis .arrow{width:20px; height:20px}
   .steps{grid-template-columns:minmax(0,1fr); gap:16px}
   .feats{grid-template-columns:minmax(0,1fr)}
