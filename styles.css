@@ -47,7 +47,7 @@ html{scroll-behavior:smooth}
 .btn{display:inline-flex; align-items:center; justify-content:center; gap:10px; height:52px; padding:0 26px; border-radius:26px; font-size:17px; font-weight:600; text-decoration:none!important}
 .btn-primary{background:var(--accent); color:#000!important}
 .btn-secondary{border:1.5px solid #5C5C5C; color:var(--text-2)!important}
-.badge-store{display:inline-flex; align-items:center; justify-content:center; height:52px; padding:0 18px; border-radius:12px; border:1.5px dashed #5C5C5C; color:var(--text-3); font-size:14px; background:#000}
+.badge-store{display:inline-flex; align-items:center; justify-content:center; height:52px; padding:0 18px; border-radius:12px; border:1.5px solid #5C5C5C; color:var(--text-2); font-size:15px; font-weight:600}
 
 /* hero */
 .hero{display:grid; grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr); gap:56px; align-items:center; padding-top:88px}
