@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#121212">
+<!-- Beispielclips für App Review (und alle, die Centered ohne eigenes Video ausprobieren
+     wollen). Bewusst nicht in der Navigation und nicht im Suchindex: Der Link steht in der
+     Antwort an Apple. Die Clips sind die unbearbeiteten Grok-Originale – mit eingebranntem
+     Rahmen wie in web/videos würde die Erkennung den Rahmen mitsehen. -->
+<meta name="robots" content="noindex">
+<title>Sample videos – Centered</title>
+<meta name="description" content="Two sample clips to try the Centered app.">
+<link rel="icon" href="../images/app-icon.png">
+<link rel="apple-touch-icon" href="../images/app-icon.png">
+<link rel="stylesheet" href="../styles.css">
+<style>
+.samples{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; margin-top:40px}
+.sample{display:flex; flex-direction:column; gap:12px}
+.sample video{width:100%; aspect-ratio:9/12; object-fit:contain; background:#000; border-radius:16px}
+.sample p{margin:0}
+@media (max-width:640px){ .samples{grid-template-columns:minmax(0,1fr)} }
+</style>
+</head>
+<body>
+<div class="site">
+
+<header class="wrap hdr">
+<a class="brand" href="../index.html"><img src="../images/app-icon.png" alt="">Centered</a>
+<nav class="nav" aria-label="Main">
+<a class="opt" href="../index.html#how">How it works</a>
+<a class="opt" href="../index.html#price">Price</a>
+<a href="../support.html">Support</a>
+</nav>
+</header>
+
+<main class="wrap">
+<div class="read">
+<div class="phead">
+<h1 class="h1">Sample videos</h1>
+<p class="lead">No suitable clip on your iPhone? Save one of these to Photos, then open it in Centered with “Select video”.</p>
+<p class="small" style="margin: 0">On iPhone: tap “Download”, open the video, then Share → Save Video. Each clip is 10 seconds long, filmed with a camera that stands still.</p>
+</div>
+
+<div class="samples">
+<div class="sample">
+<video src="climbing-upright.mp4" poster="climbing-upright.jpg" controls playsinline preload="none"></video>
+<p><b>Climbing</b> · filmed upright · 784 × 1168</p>
+<p><a class="btn btn-secondary" href="climbing-upright.mp4" download>Download</a></p>
+</div>
+<div class="sample">
+<video src="breaking-sideways.mp4" poster="breaking-sideways.jpg" controls playsinline preload="none"></video>
+<p><b>Breaking</b> · filmed sideways · 1280 × 720</p>
+<p><a class="btn btn-secondary" href="breaking-sideways.mp4" download>Download</a></p>
+</div>
+</div>
+</div>
+</main>
+
+<footer class="ftr">
+<div class="wrap">
+<span>© 2026 Sebastian Schilling</span>
+<nav aria-label="Footer"><a href="../support.html">Support</a><a href="../privacy.html">Privacy</a><a href="../datenschutz.html">Datenschutz</a><a href="../impressum.html">Impressum</a></nav>
+</div>
+</footer>
+
+</div>
+</body>
+</html>
