@@ -79,7 +79,7 @@ html{scroll-behavior:smooth}
 .ba-src{height:100%}
 .ba-src{position:relative; overflow:hidden; border-radius:16px; flex-shrink:0}
 .ba-src.ph-tall{aspect-ratio:9/16}
-/* Hochkant-Quellen aus Grok sind 2:3 (784 × 1168), nicht 9:16 – in einer 9:16-Box schnitte
+/* Manche Hochkant-Quellen sind 2:3 (784 × 1168), nicht 9:16 – in einer 9:16-Box schnitte
    `object-fit: cover` den Fels an den Seiten ab, und mit ihm den Rand des gelben Rahmens. */
 .ba-src.ph-tall.src-2x3{aspect-ratio:2/3}
 .ba-src.ph-wide{aspect-ratio:16/9}
